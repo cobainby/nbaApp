@@ -7,6 +7,11 @@ import fastClick from 'fastclick'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'//轮播插件
+// 轮播图必备css
+import 'swiper/dist/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper, /* { 可添加默认参数 } */)
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
