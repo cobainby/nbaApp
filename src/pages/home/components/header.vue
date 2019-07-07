@@ -15,7 +15,7 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-//注入公共变量
+//注入公共变量，弹性盒子头部分区大
 @import '~styles/varibles.styl'
 .header
   display: flex
