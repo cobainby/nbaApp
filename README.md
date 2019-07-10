@@ -19,5 +19,4 @@ npm run build --report
 ```
 
 本app提供基本nba球星的数据及新闻.
-braname分支为本人测试分支
-master是项目分支
+基于兴趣所写
