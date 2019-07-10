@@ -17,6 +17,7 @@ export default {
 <style lang="stylus" scoped>
 //注入公共变量
 @import '~styles/varibles.styl'
+
 .header
   display: flex
   height: 0.86rem
