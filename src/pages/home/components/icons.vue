@@ -68,7 +68,7 @@ export default {
           id: "006",
           imgUrl:
             "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-          des: "球队分区"
+          des: "球队历史"
         },
         {
           id: "007",
