@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="iconsOption">
       <!-- slides -->
       <swiper-slide
         v-for="(page,index) of pages"
@@ -31,70 +31,18 @@
 <script>
 export default {
   name: "HomeIcons",
+  props: ["list"],
   data() {
     return {
-      iconList: [
-        {
-          id: "001",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          des: "热门新闻"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          des: "球星轶闻"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-          des: "nba数据"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
-          des: "比赛实录"
-        },
-        {
-          id: "005",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/184e261814a5d07a5d3d08cd29cf590d.png",
-          des: "技术分析"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-          des: "球队历史"
-        },
-        {
-          id: "007",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-          des: "球迷交流"
-        },
-        {
-          id: "008",
-          imgUrl:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/184e261814a5d07a5d3d08cd29cf590d.png",
-          des: "赛后花边"
-        },
-        {
-          id: "009",
-          imgUrl:
-            "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-          des: "交易流言"
-        }
-      ]
+      iconsOption:{
+        autoplay:false
+      }
     };
   },
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         //当前的icon图标应该在第几页
         const page = Math.floor(index / 8);
         if (!pages[page]) {
@@ -116,8 +64,10 @@ export default {
   height: 0;
   padding-bottom: 50%;
 }
-.icons
-  margin-top:.1rem
+
+.icons {
+  margin-top: 0.1rem;
+
   .icon {
     position: relative;
     overflow: hidden;
@@ -154,4 +104,5 @@ export default {
       ellipsis();
     }
   }
+}
 </style>
